@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Q3IpsQz9WX8Va8IBnVCGjJj3xiqM8aezqNHHbY92uIE=_1</activeVersionIdentifier>
+    <developerName>ISO_Files_Prompt</developerName>
+    <masterLabel>ISO Files Prompt</masterLabel>
+    <templateVersions>
+        <content>You act as a service agent and respond to the user request : {!$Input:UserInput}
+
+Respond by the following:
+
+&quot;&quot;&quot;
+{!$EinsteinSearch:File_Certification_Pre_Check_Agent_Libra_1Cx_Rv727b0a847.results}
+&quot;&quot;&quot;
+</content>
+        <inputs>
+            <apiName>UserInput</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>User Input</masterLabel>
+            <referenceName>Input:UserInput</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_Certification_Pre_Check_Agent_Libra_1Cx_Rv727b0a847</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:UserInput}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_Certification_Pre_Check_Agent_Libra_1Cx_Rv727b0a847</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>Q3IpsQz9WX8Va8IBnVCGjJj3xiqM8aezqNHHbY92uIE=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

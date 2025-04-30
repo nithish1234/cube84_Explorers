@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:UserInput" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:UserInput" : {
+      "title" : "User Input",
+      "description" : "The input is a search query entered by the user.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

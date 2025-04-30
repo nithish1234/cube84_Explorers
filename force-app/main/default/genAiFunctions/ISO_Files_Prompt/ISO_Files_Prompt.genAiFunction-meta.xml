@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action provides information about ISO certification process and help the user through the ISO certification process.</description>
+    <invocationTarget>ISO_Files_Prompt</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>ISO Files Prompt</masterLabel>
+    <progressIndicatorMessage>Gathering information</progressIndicatorMessage>
+</GenAiFunction>
