@@ -1,0 +1,31 @@
+{
+  "required" : [ "caseDescription", "caseSubject", "messagingSession" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "caseDescription" : {
+      "title" : "caseDescription",
+      "description" : "The description should be no more than 255 characters and should provide more depth about what exactly the customer asked, important data, and any other relevant information to help a customer service representative understand the context of this conversation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "caseSubject" : {
+      "title" : "caseSubject",
+      "description" : "The subject should be no more than 40 characters and should have 'Customer wants to connect with you regarding' and also mention the type of ISO Certification the user is interested in.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "messagingSession" : {
+      "title" : "messagingSession",
+      "description" : "Always use Messaging Session found in the context variables. Never use user-provided information for this input",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "MessagingSession"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
